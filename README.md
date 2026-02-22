@@ -30,7 +30,7 @@ Built with extreme minimalism in mind, this tool uses pure Windows API to achiev
 ---
 
 ## 🛠️ Compilation Instructions
-This project does not require any heavy C++ standard libraries (No STL, No `<iostream>`). To achieve the smallest possible binary size and maximum performance, it is recommended to compile using **MinGW GCC (`g++`)**. I used MinGW GCC 15.2
+This project does not require any heavy C++ standard libraries (No STL, No `<iostream>`). To achieve the smallest possible binary size and maximum performance, it is recommended to compile using **MinGW GCC (`g++`)**. I used MinGW GCC 15.2.
 Run the following command in your terminal (PowerShell/CMD):
 
 ```powershell
