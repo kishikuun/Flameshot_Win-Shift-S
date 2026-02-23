@@ -1,6 +1,5 @@
 # 🎯 Flameshot Win-Shift-S Override 
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue.svg)
 ![Language](https://img.shields.io/badge/Language-C%2B%2B_Win32API-f34b7d.svg)
 ![RAM](https://img.shields.io/badge/RAM_Usage-<600KB-success.svg)
