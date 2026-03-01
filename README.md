@@ -3,7 +3,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue.svg)
 ![Language](https://img.shields.io/badge/Language-C%2B%2B_Win32API-f34b7d.svg)
 ![RAM](https://img.shields.io/badge/RAM_Usage-<600KB-success.svg)
-![Size](https://img.shields.io/badge/Binary_Size-~16KB-success.svg)
+![Size](https://img.shields.io/badge/Binary_Size-~20KB-success.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 > A highly optimized, background C++ Win32 utility that forcibly intercepts the default Windows screenshot hotkeys (`Print Screen` and `Win + Shift + S`) and redirects them to **Flameshot**, completely bypassing the native Windows Snipping Tool.
@@ -12,11 +12,11 @@ Built with extreme minimalism in mind, this tool uses pure Windows API to achiev
 ---
 
 ## ✨ Features
-* **🧠 Smart Auto-Detect (Zero Config):** Drop the `.exe` in your Flameshot directory, and it automatically detects the correct path. Gracefully falls back to `C:\Program Files\...` if placed elsewhere.
-* **🪶 Ultra-Lightweight:** Replaces heavy `ShellExecuteA` with `CreateProcessA` and uses aggressive memory trimming (`SetProcessWorkingSetSize`) to keep RAM usage under **300KB**.
-* **⏱️ Debounce Protection:** A built-in 300ms cooldown prevents rapid-fire execution and system hanging if keys are accidentally held down.
-* **🔒 Single Instance Lock:** Mutex protection ensures only one background process can run at a time.
-* **🛡️ Anti-Looping:** Ignores injected/simulated key presses (`LLKHF_INJECTED`) to avoid conflicts with macro software or keyloggers.
+* **🔄 Graceful Fallback:** Real-time detection of `flameshot.exe`. If Flameshot isn't running, it automatically lets Windows handle the hotkeys (Snipping Tool still works).
+* **🧠 Smart Auto-Detect:** Drop the `.exe` in your Flameshot directory, and it automatically detects the correct path. Gracefully falls back to `C:\Program Files\...` if placed elsewhere.
+* **⚡ High Performance:** Executable path is cached at startup to ensure zero `Disk I/O` latency when keys are pressed.
+* **🪶 Lightweight:** Pure `Win32 API`. No heavy libraries. Uses aggressive memory trimming to stay under **600KB** RAM.
+* **⏱️ Debounce & Protection:** **300ms** cooldown to prevent spam; Mutex for single-instance lock; `LLKHF_INJECTED` check to avoid macro loops.
 
 ---
 ## 🚀 Installation & Usage
